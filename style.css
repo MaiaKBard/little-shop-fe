@@ -88,10 +88,28 @@ form {
 }
 
 .merchant {
+  display: flex;
   width: 98%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: #f3f5f7;
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.merchant:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+view#merchants-view{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
 }
 
 .view-items-button {
@@ -100,6 +118,8 @@ form {
 }
 
 .merchant-name {
+  font-size: 1.2rem;
+  font-weight: bold;
   padding-left: 10px;
   margin: 0px;
 }
@@ -124,6 +144,9 @@ form {
 .fail {
   color: red;
 }
+
+
+
 
 /* HIDDEN ELEMENTS */
 
