@@ -13,6 +13,10 @@ body {
   margin: 0px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 /* SIDEBAR */
 
 aside {
@@ -72,7 +76,7 @@ form {
 .item,
 .merchant {
   display: flex;
-  background-color: lightgray;
+  background-color: rgb(211, 211, 211);
   margin: 10px;
   padding: 5px;
 }
@@ -127,4 +131,3 @@ form {
   display: none;
 } 
   
-co
