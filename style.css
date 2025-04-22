@@ -1,116 +1,140 @@
 /* GENERAL */
 * {
-  font-family: sans-serif;
+  font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+  box-sizing: border-box;
 }
 
 body, html {
-  background-color: gray;
+  background-color: #f9f9fb;
 }
 
 body {
   display: flex;
   margin: 0px;
-  background-color: black;
+  background-color: #f9f9fb;
+}
+
+/* BUTTONS */
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
   cursor: pointer;
+  background-color: #e8e6fb;
+  transform: scale(1.03);
+}
+
+button:focus {
+  outline: 2px solid #5246e2;
+  outline-offset: 2px;
 }
 
 /* SIDEBAR */
-
 aside {
-  width: 25%;
-  margin: none;
+  width: 280px;
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  position: sticky;
+  top: 0; 
+  height: 100vh;
 }
 
 header {
   text-align: center;
-  margin: 10px 10px 80px 10px;
-  background-color: black;
+  margin-bottom: 60px;
+  background-color: #1c1c1c;
   color: white;
-  padding: 15px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 h1 {
-  font-size: 2.5em;
-}
-
-h1, 
-h2 {
+  font-size: 2.4rem;
   margin: 0;
+  color: #ffffff;
 }
 
+h2, h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+/* NAVIGATION */
 nav {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  gap: 12px;
 }
 
 nav > button {
-  border: none;
-  margin-bottom: 20px;
-  background-color: gray;
-  width: 65%;
-  text-align: center;
-  border-radius: 10px 0px 0px 10px;
-  padding: 20px;
+  background: none;
+  text-align: left;
+  font-size: 1rem;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+nav > button:hover {
+  background-color: #f0f0ff;
+  color: #5246e2;
 }
 
 .active-nav {
-  background-color: white;
+  background-color: #e8e6fb;
+  color: #5246e2;
+  font-weight: 600;
 }
 
 /* MAIN */
-
 main {
-  padding: 10px;
+  padding: 40px;
+  background-color: #f9f9fb;
   width: 75%;
-  background-color: white;
 }
 
 form {
   display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
+/* ITEM & MERCHANT */
 .item,
 .merchant {
-  display: flex;
-  background-color:lightgray;
-  margin: 10px;
-  padding: 5px;
-}
-
-.item {
-  width: 30%;
-  flex-direction: column;
-  justify-content: center;
-  
-}
-
-.merchant {
-  display: flex;
-  width: 98%;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f3f5f7;
-  border-radius: 10px;
-  padding: 15px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 10px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.merchant:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-view#merchants-view{
+.item {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 20px;
+  gap: 12px;
+}
+
+.merchant {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  width: 100%; 
+  padding: 10px 20px;
+}
+
+.item:hover,
+.merchant:hover {
+  transform: translateY(-3px);
 }
 
 .view-items-button {
@@ -119,42 +143,47 @@ view#merchants-view{
 }
 
 .merchant-name {
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding-left: 10px;
-  margin: 0px;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
-.display-options {
-  display: flex;
-  align-items: center;
+/* TEXT */
+label {
+  font-size: 1rem;
+  padding: 10px 0;
 }
 
 .display-options > button {
   margin-left: 15px;
 }
 
-.merchant-name-in-item {
-  display: inline;
-}
-
 .success {
   color: green;
+  font-weight: 500;
+
 }
 
 .fail {
   color: red;
+  font-weight: 500;
+
 }
 
-
-section#items-view {
-  display: flex;
-  flex-wrap: wrap;
+/* GRID VEIW */
+view#items-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  padding-top: 20px;
 }
 
-/* HIDDEN ELEMENTS */
-
+/* UTILITY */
 .hidden {
   display: none;
 } 
   
+.display-options {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
