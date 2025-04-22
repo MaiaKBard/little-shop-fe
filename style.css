@@ -11,6 +11,7 @@ body, html {
 body {
   display: flex;
   margin: 0px;
+  background-color: black;
 }
 
 button:hover {
@@ -76,7 +77,7 @@ form {
 .item,
 .merchant {
   display: flex;
-  background-color: rgb(211, 211, 211);
+  background-color:lightgray;
   margin: 10px;
   padding: 5px;
 }
@@ -85,6 +86,7 @@ form {
   width: 30%;
   flex-direction: column;
   justify-content: center;
+  
 }
 
 .merchant {
@@ -123,6 +125,11 @@ form {
 
 .fail {
   color: red;
+}
+
+section#items-view {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* HIDDEN ELEMENTS */
