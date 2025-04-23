@@ -13,7 +13,7 @@ This application is a Merchant & Items dashboard built with JavaScript, HTML, an
 4. Ensure your backend is running and accessible rails s
 
 ### Preview of App:
-Gif!!!
+![button color](https://media-hosting.imagekit.io/813bc0ceb1be40a7/Button%20back%20color.png?Expires=1840035963&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=JR8684dSvOj0dnIL2OaBy~GCPSVzB8d~K82PpayWiFpq0xrEdI~lMXmLgO5B6eI~s-Y-azoK~78L2q6dMYdJheqly~HrdperjUV3GfEKn7TOBqO47ArD7WsAkhwx0Wg7vYt59bvgQEoCqnTeo3sjM9UjlBkUUjNcDt8wZmfHQpp-WS7QY8MaNXrerdFgy9cTv~o1Sgha3PVWpKMKcF3Y4PEDEqaQINO5mqlARouXHcru7XHD34PYFVGNyEwHJQFrvLDJ0KdosLVK7~VBkPRAUzsBxVtPrWad1QLem-6jVW6doeHWzUPhHUuK3FzBzEKOMC-kgM~GJ8aWT22f1pa6iQ__)
 ### Context:
 This was a short-term front-end project completed over a few days. The goal was to practice DOM manipulation and API integration using vanilla JavaScript.
 David and I worked directly to the following features:
