@@ -9,6 +9,7 @@ const merchantsNavButton = document.querySelector("#merchants-nav")
 const itemsNavButton = document.querySelector("#items-nav")
 const addNewButton = document.querySelector("#add-new-button")
 const showingText = document.querySelector("#showing-text")
+const sortButton = document.querySelector("#sort-button")
 
 //Form elements
 const merchantForm = document.querySelector("#new-merchant-form")
@@ -30,6 +31,8 @@ addNewButton.addEventListener('click', () => {
 submitMerchantButton.addEventListener('click', (event) => {
   submitMerchant(event)
 })
+
+sortButton.addEventListener('click', sortMerchants)
 
 //Global variables
 let merchants;
@@ -255,4 +258,11 @@ function findMerchant(id) {
       return foundMerchant
     }
   }
+}
+
+function sortMerchants(){
+  const sortedMerchants = merchants.sort((a, b) => {
+    return a.attributes.name.localeCompare(b.attributes.name)
+  })
+  displayMerchants(sortedMerchants)
 }
