@@ -1,6 +1,6 @@
 import './style.css'
-import {fetchData, postData, deleteData, editData} from './apiCalls'
-import {showStatus} from './errorHandling'
+import {fetchData, postData, deleteData, editData} from './apiCalls.js'
+import {showStatus} from './errorHandling.js'
 
 //Sections, buttons, text
 const itemsView = document.querySelector("#items-view")
@@ -237,27 +237,19 @@ function addRemoveActiveNav(nav1, nav2) {
   nav2.classList.remove('active-nav')
 }
 
-function filterByMerchant(merchantId) {
-  const specificMerchantItems = []
-
-  for (let i = 0; i < items.length; i++) {
-    if (items[i].attributes.merchant_id === parseInt(merchantId)) {
-      specificMerchantItems.push(items[i])
-    }
-  }
+function filterByMerchant(merchantId) { 
+  const specificMerchantItems = items.filter((item) => {
+    return item.attributes.merchant_id === parseInt(merchantId)
+  })
 
   return specificMerchantItems
 }
 
 function findMerchant(id) {
-  let foundMerchant;
-
-  for (let i = 0; i < merchants.length; i++) {
-    if (parseInt(merchants[i].id) === parseInt(id)) {
-      foundMerchant = merchants[i]
-      return foundMerchant
-    }
-  }
+  let foundMerchant = merchants.find((merchant) => {
+    return parseInt(merchant.id) === parseInt(id)
+  })
+  return foundMerchant
 }
 
 function sortMerchants(){
@@ -266,3 +258,4 @@ function sortMerchants(){
   })
   displayMerchants(sortedMerchants)
 }
+
