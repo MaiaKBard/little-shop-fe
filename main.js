@@ -1,6 +1,6 @@
 import './style.css'
-import {fetchData, postData, deleteData, editData} from './apiCalls'
-import {showStatus} from './errorHandling'
+import {fetchData, postData, deleteData, editData} from './apiCalls.js'
+import {showStatus} from './errorHandling.js'
 
 //Sections, buttons, text
 const itemsView = document.querySelector("#items-view")
